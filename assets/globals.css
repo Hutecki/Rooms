@@ -2,3 +2,17 @@
 @tailwind components;
 @tailwind utilities;
 
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;1,100&display=swap');
+.thin-italic {
+    font-family: 'Roboto', sans-serif;
+    font-weight: 100;
+    font-style: italic;
+    
+  }
+  @media(max-width:763px)
+  {
+    .thin-italic
+    {
+        font-size: 10px;
+    }
+  }

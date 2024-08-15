@@ -10,6 +10,12 @@ const SearchBar = () => {
     setSearchTerm(event.target.value);
   };
 
+  const handleKeyDown = (event) => {
+    if (event.key === "Enter") {
+      document.getElementById("navigate-button").click();
+    }
+  };
+
   return (
     <div className="flex flex-col items-center mb-4">
       <input
@@ -17,10 +23,14 @@ const SearchBar = () => {
         placeholder="Podaj pokój..."
         value={searchTerm}
         onChange={handleSearchChange}
+        onKeyDown={handleKeyDown}
         className="p-2 mb-4 border border-gray-300 rounded w-full max-w-xs"
       />
       <Link href={`/room/${searchTerm}`}>
-        <button className="p-2 bg-blue-500 text-white rounded w-full max-w-xs">
+        <button
+          id="navigate-button"
+          className="p-2 bg-blue-500 text-white rounded w-full max-w-xs"
+        >
           Przejdź do pokoju
         </button>
       </Link>

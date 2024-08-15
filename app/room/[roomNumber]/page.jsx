@@ -6,6 +6,25 @@ import ErrorPage from "@/components/ErrorPage"; // Import the ErrorPage componen
 const RoomPage = async ({ params }) => {
   const { roomNumber } = params;
 
+  // Define the list of stairs-only rooms
+  const stairsRooms = [
+    "145",
+    "214",
+    "215",
+    "216",
+    "217",
+    "218",
+    "219",
+    "319",
+    "320",
+    "321",
+    "322",
+    "323",
+    "324",
+    "325",
+    "326",
+  ];
+
   // Validate the room number first
   if (isNaN(roomNumber)) {
     return (
@@ -34,11 +53,19 @@ const RoomPage = async ({ params }) => {
     );
   }
 
+  // Check if the room number is in the stairs-only list
+  const isStairsOnly = stairsRooms.includes(roomNumber.toString());
+
   return (
     <div className="flex flex-col justify-center items-center h-screen">
+      <div className="absolute text-xs sm:text-sm md:text-sm top-0 right-3 md:top-5 md:right-5 text-neutral-500 thin-italic">
+        <h1 className="text-center">Legenda:</h1>
+        <p>WB-Winda Biblioteczna</p>
+        <p>WG-Winda Główna</p>
+        <p>WS-Winda Szklana</p>
+        <p>SCH-Schody</p>
+      </div>
       <h1 className="text-4xl mb-2">Pokój {room.Pokoj}</h1>
-      <p className="text-2xl mb-2">Sektor: {room.Sektor}</p>
-      <p className="text-2xl mb-2">Trasa: {room.Winda}</p>
       {room.Atrybuty === "" ? (
         ""
       ) : (
@@ -46,8 +73,17 @@ const RoomPage = async ({ params }) => {
           Atrybuty: {room.Atrybuty}
         </p>
       )}
+      <p className="text-2xl mb-2 text-center break-words">
+        Trasa: {room.Winda}
+      </p>
+      <p className="text-2xl mb-2">(Sektor): {room.Sektor}</p>
+      <p className="text-2xl mb-2">(Poziom): {room.Poziom}</p>
 
-      {/* Add more room details as needed */}
+      {isStairsOnly && (
+        <p className="text-4xl mt-2 text-red-500 text-center break-words">
+          Uwaga: Schody!
+        </p>
+      )}
     </div>
   );
 };
