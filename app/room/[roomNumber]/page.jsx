@@ -58,7 +58,7 @@ const RoomPage = async ({ params }) => {
 
   return (
     <div className="flex flex-col justify-center items-center h-screen">
-      <div className="absolute text-xs sm:text-sm md:text-sm top-0 right-3 md:top-5 md:right-5 text-neutral-500 thin-italic">
+      <div className="absolute text-sm sm:text-sm md:text-base top-0 right-3 md:top-5 md:right-5 text-neutral-500 thin-italic">
         <h1 className="text-center">Legenda:</h1>
         <p>WB-Winda Biblioteczna</p>
         <p>WG-Winda Główna</p>
