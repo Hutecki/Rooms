@@ -42,7 +42,9 @@ const RoomPage = async ({ params }) => {
       {room.Atrybuty === "" ? (
         ""
       ) : (
-        <p className="text-2xl mb-2">Atrybuty: {room.Atrybuty}</p>
+        <p className="text-2xl mb-2 text-center break-words">
+          Atrybuty: {room.Atrybuty}
+        </p>
       )}
 
       {/* Add more room details as needed */}
