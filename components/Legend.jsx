@@ -30,12 +30,13 @@ const Legend = () => {
             aria-label="Toggle Legend"
           >
             <FontAwesomeIcon
-              icon={faChevronRight}
+              icon={faChevronLeft}
               size={32}
               className="chevron-icon transition-transform duration-300"
             />
           </button>
-          <p className="thin-italic Alt">Legenda</p>
+          {isVisible ? "" : <p className="thin-italic Alt">Legenda</p>}
+
           <div className="legend-content p-4">
             <h1 className="text-center">Legenda:</h1>
             <p>WB-Winda Biblioteczna</p>

@@ -17,6 +17,9 @@ const MainLayout = ({ children }) => {
         </Link>
 
         <div>{children}</div>
+        <div className="credits font-Roboto absolute right-1 bottom-0 text-xs md:text-sm font-extralight italic">
+          Hubert&Jerzy
+        </div>
       </body>
     </html>
   );
