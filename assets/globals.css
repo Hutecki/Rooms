@@ -12,8 +12,46 @@
   @media(max-width:763px)
   {
     .thin-italic
-    { 
+    {   
         font-size: 17px;
         color: #3b3b3b;
     }
+    .legend-container
+    {
+      top:1.3rem;
+    }
+  }
+  .legend-container {
+    width: max-content;
+    transition: transform 0.3s ease-in-out;
+  }
+  
+  .legend-container.translate-x-full {
+    transform: translateX(100%);
+  }
+  
+  .legend-container.translate-x-0 {
+    transform: translateX(0);
+  }
+  
+  .legend-toggle-button {
+    position: absolute;
+    top:-6px; /* Adjust as needed */
+    left: -2rem; /* Adjust as needed */
+    transition: transform 0.3s ease-in-out;
+   height: 32px;
+  }
+  
+  .chevron-icon.rotate-180 {
+    transform: rotate(180deg);
+  }
+  
+  .chevron-icon.rotate-0 {
+    transform: rotate(0deg);
+  }
+
+  .chevron-icon 
+  {
+    position: relative;
+    top:-25%;
   }

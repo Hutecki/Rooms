@@ -2,6 +2,7 @@ import React from "react";
 import connectDB from "@/config/database";
 import Room from "@/models/Room";
 import ErrorPage from "@/components/ErrorPage"; // Import the ErrorPage component
+import Legend from "@/components/Legend";
 
 const RoomPage = async ({ params }) => {
   const { roomNumber } = params;
@@ -58,13 +59,7 @@ const RoomPage = async ({ params }) => {
 
   return (
     <div className="flex flex-col justify-center items-center h-screen">
-      <div className="absolute text-xs sm:text-sm md:text-base top-0 right-3 md:top-5 md:right-5 text-neutral-500 thin-italic">
-        <h1 className="text-center">Legenda:</h1>
-        <p>WB-Winda Biblioteczna</p>
-        <p>WG-Winda Główna</p>
-        <p>WS-Winda Szklana</p>
-        <p>SCH-Schody</p>
-      </div>
+      <Legend></Legend>
       <h1 className="text-4xl mb-2">Pokój {room.Pokoj}</h1>
       {room.Atrybuty === "" ? (
         ""
