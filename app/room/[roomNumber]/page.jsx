@@ -71,12 +71,12 @@ const RoomPage = async ({ params }) => {
       <p className="text-2xl mb-2 text-center break-words">
         Trasa: {room.Winda}
       </p>
-      <p className="text-2xl mb-2">(Sektor): {room.Sektor}</p>
       {room.Pokoj === 400 ? (
-        <p className="text-2xl mb-2">(Poziom): 4+5+6</p>
+        <p className="text-2xl mb-2">Poziom: 4+5+6</p>
       ) : (
-        <p className="text-2xl mb-2">(Poziom): {room.Poziom}</p>
+        <p className="text-2xl mb-2">Poziom: {room.Poziom}</p>
       )}
+      <p className="text-2xl mb-2">Sektor: {room.Sektor}</p>
 
       {isStairsOnly && (
         <p className="text-4xl mt-2 text-red-500 text-center break-words">

@@ -9,6 +9,12 @@
     font-style: italic;
     
   }
+  p.Alt
+  {
+    position: absolute;
+    top:25px;
+    right:220px; 
+  }
   @media(max-width:763px)
   {
     .thin-italic
@@ -17,8 +23,16 @@
         color: #3b3b3b;
         font-weight: bold;
     }
+    .thin-italic.Alt 
+    {
+     
+          font-weight: 300;
+          font-size: 15px;
+          color: #3b3b3b;
+    }
     .focused {
       transform: translateY(-50px); /* Adjust the value as needed */
+      transition: transform 0.3s ease-in-out; 
     }
     .legend-container
     {
