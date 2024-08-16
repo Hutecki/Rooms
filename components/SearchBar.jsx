@@ -5,6 +5,7 @@ import Link from "next/link";
 
 const SearchBar = () => {
   const [searchTerm, setSearchTerm] = useState("");
+  const [isFocused, setIsFocused] = useState(false);
 
   const handleSearchChange = (event) => {
     setSearchTerm(event.target.value);
@@ -17,13 +18,19 @@ const SearchBar = () => {
   };
 
   return (
-    <div className="flex flex-col items-center mb-4">
+    <div
+      className={`flex flex-col items-center mb-4 transition-transform ${
+        isFocused ? "focused" : ""
+      }`}
+    >
       <input
         type="text"
         placeholder="Podaj pokój..."
         value={searchTerm}
         onChange={handleSearchChange}
         onKeyDown={handleKeyDown}
+        onFocus={() => setIsFocused(true)}
+        onBlur={() => setIsFocused(false)}
         className="p-2 mb-4 border border-gray-300 rounded w-full max-w-xs"
       />
       <Link href={`/room/${searchTerm}`}>
