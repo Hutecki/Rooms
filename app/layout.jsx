@@ -17,7 +17,7 @@ const MainLayout = ({ children }) => {
         </Link>
 
         <div>{children}</div>
-        <div className="credits font-Roboto absolute right-1 bottom-0 text-sm md:text-base font-extralight italic">
+        <div className="credits font-Roboto fixed right-1 bottom-0 text-sm md:text-base font-extralight italic">
           design: Hubert & Jerzy
         </div>
       </body>
