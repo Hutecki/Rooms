@@ -63,6 +63,16 @@ const RoomPage = async ({ params }) => {
       <h1 className="text-4xl md:text-5xl mb-6">Pokój {room.Pokoj}</h1>
       <table className="table-auto border-collapse border border-gray-300 w-full max-w-md md:max-w-lg lg:max-w-xl">
         <tbody>
+          {room.Pokoj > 400 ? (
+            <tr className="border-t">
+              <td className="p-2 md:p-4 border-r font-medium text-base md:text-lg">
+                Budynek:
+              </td>
+              <td className="p-2 md:p-4 text-base md:text-lg">A3</td>
+            </tr>
+          ) : (
+            ""
+          )}
           {room.Atrybuty && (
             <tr className="border-t">
               <td className="p-2 md:p-4 border-r font-medium text-base md:text-lg">
@@ -99,16 +109,6 @@ const RoomPage = async ({ params }) => {
               </td>
               <td className="p-2 md:p-4 text-base md:text-lg">{room.Sektor}</td>
             </tr>
-          )}
-          {room.Pokoj > 400 ? (
-            <tr className="border-t">
-              <td className="p-2 md:p-4 border-r font-medium text-base md:text-lg">
-                Budynek:
-              </td>
-              <td className="p-2 md:p-4 text-base md:text-lg">A3</td>
-            </tr>
-          ) : (
-            ""
           )}
         </tbody>
       </table>
