@@ -24,7 +24,7 @@ const Legend = () => {
         <div className="flex items-center relative">
           <button
             onClick={toggleVisibility}
-            className={`legend-toggle-button rounded-full bg-blue-500 text-white p-2 focus:outline-none transition-transform transform ${
+            className={`legend-toggle-button rounded-full bg-blue-700 text-white p-2 focus:outline-none  hover:bg-blue-900 transition-transform transform ${
               isVisible ? "rotate-180" : "rotate-0"
             }`}
             aria-label="Toggle Legend"
@@ -39,9 +39,9 @@ const Legend = () => {
 
           <div className="legend-content p-4">
             <h1 className="text-center">Legenda:</h1>
-            <p>WB-Winda Biblioteczna</p>
             <p>WG-Winda Główna</p>
             <p>WS-Winda Szklana</p>
+            <p>WB-Winda Biblioteczna</p>
             <p>SCH-Schody</p>
           </div>
         </div>

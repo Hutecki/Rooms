@@ -1,16 +1,24 @@
 import React from "react";
 import "@/assets/globals.css";
 import Link from "next/link";
-import { FaHome } from "react-icons/fa"; // Import the home icon
+import { FaHome } from "react-icons/fa";
+import Image from "next/image";
+import logo from "@/assets/images/logo_arche_ok.png";
 
 const MainLayout = ({ children }) => {
   return (
     <html>
       <body>
         {/* Home Icon Link */}
-
+        <Image
+          src={logo}
+          alt=""
+          className="fixed top-0 left-0 h-30 w-30"
+          width={70}
+          height={100}
+        />
         <Link
-          className="fixed top-4 left-4 text-blue-700 hover:text-blue-900"
+          className="fixed top-4 left-20 text-blue-700 hover:text-blue-900"
           href="/"
         >
           <FaHome size={32} />

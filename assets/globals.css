@@ -1,7 +1,6 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
-
 @import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;1,100&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
 .thin-italic {
@@ -10,19 +9,29 @@
     font-style: italic;
     
   }
-  /* .table-auto
-  {
-    font-family: 'Montserrat',sans-serif;
-  } */
+  /* Legend description  */
   p.Alt
   {
     position: absolute;
     top:25px;
     right:220px; 
   }
+  /* button for printing */
+  .print-btn
+  {
+    position: fixed;
+    top: 11px;
+    left: 120px;
+  }
+
+  /* Phone view styling */
 
   @media(max-width:763px)
   {
+    .print-btn
+    {
+      display: none;
+    }
     .thin-italic
     {   
         font-size: 17px;
@@ -37,7 +46,7 @@
           color: #3b3b3b;
     }
     .focused {
-      transform: translateY(-50px); /* Adjust the value as needed */
+      transform: translateY(-50px); 
       transition: transform 0.3s ease-in-out; 
     }
     .legend-container
@@ -60,8 +69,8 @@
   
   .legend-toggle-button {
     position: absolute;
-    top:-6px; /* Adjust as needed */
-    left: -2rem; /* Adjust as needed */
+    top:-6px; 
+    left: -2rem; 
     transition: transform 0.3s ease-in-out;
    height: 32px;
   }
@@ -78,4 +87,74 @@
   {
     position: relative;
     top:-25%;
+  }
+
+
+  /* print view styling  */
+  @media print {
+    .print:hidden,
+    .legend,
+    .credits,
+    .navbar
+    { 
+      display: none !important;
+    }
+  
+
+    .fixed 
+    {
+      display: none;
+    }
+    body {
+      margin: 0 !important;
+      padding: 0 !important;
+      
+    }
+  
+
+    table {
+      width: 100% !important;
+      border-collapse: collapse !important;
+      height: 40%;
+    }
+    
+  
+    th,
+    td {
+      border: 1px solid #000 !important;
+      padding: 15px !important; 
+      text-align: left !important;
+    
+    }
+    .print-legend {
+      text-align: center;
+      display: block !important;
+      font-size: 0.5rem !important;
+    }
+  
+    .print-legend p
+    {
+      margin-top: 10px !important;
+      font-size: 1.2rem !important;
+    }
+    .print-legend h1
+    {
+      margin-bottom: 20px !important;
+      font-size: 1.4rem !important;
+    }
+
+    h1 {
+      font-size: 2.5rem !important; 
+      text-align: center !important;
+      margin-bottom: 1rem !important;
+    }
+  
+    p, td {
+      font-size: 1.6rem !important;
+    }
+  
+   
+    body {
+      font-size: 1.6rem !important; 
+    }
   }
