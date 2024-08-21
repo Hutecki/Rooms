@@ -4,7 +4,6 @@ import Room from "@/models/Room";
 import ErrorPage from "@/components/ErrorPage";
 import Legend from "@/components/Legend";
 import PrintButton from "@/components/PrintButton";
-
 const RoomPage = async ({ params }) => {
   const { roomNumber } = params;
 
