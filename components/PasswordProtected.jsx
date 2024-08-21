@@ -50,7 +50,7 @@ const PasswordProtected = ({ correctPassword, children }) => {
         />
         <button
           type="submit"
-          className="bg-blue-500 text-white py-2 px-4 rounded hover:bg-blue-700"
+          className="ui bg-blue-500 text-white py-2 px-4 rounded hover:bg-blue-700"
         >
           Submit
         </button>

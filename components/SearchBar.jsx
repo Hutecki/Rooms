@@ -36,7 +36,7 @@ const SearchBar = () => {
       <Link href={`/room/${searchTerm}`}>
         <button
           id="navigate-button"
-          className="p-2 bg-blue-500 text-white rounded w-full max-w-xs"
+          className="ui p-2 bg-blue-500 text-white rounded w-full max-w-xs"
         >
           Przejdź do pokoju
         </button>

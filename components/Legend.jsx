@@ -15,16 +15,16 @@ const Legend = () => {
   };
 
   return (
-    <div className="fixed top-0 right-0 md:top-5 md:right-5 flex flex-col items-end">
+    <div className="fixed top-0 right-0 md:top-10 md:right-5 flex flex-col items-end">
       <div
-        className={`legend-container fixed top-0 right-0 md:top-5 text-neutral-500 thin-italic transition-transform transform ${
+        className={`legend-container fixed top-0 right-0 md:top-8 text-neutral-500 thin-italic transition-transform transform ${
           isVisible ? "translate-x-0" : "translate-x-full"
         }`}
       >
         <div className="flex items-center relative">
           <button
             onClick={toggleVisibility}
-            className={`legend-toggle-button rounded-full bg-blue-700 text-white p-2 focus:outline-none  hover:bg-blue-900 transition-transform transform ${
+            className={`ui legend-toggle-button rounded-full bg-blue-700 text-white p-2 focus:outline-none  hover:bg-blue-900 transition-transform transform ${
               isVisible ? "rotate-180" : "rotate-0"
             }`}
             aria-label="Toggle Legend"

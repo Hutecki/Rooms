@@ -1,19 +1,19 @@
 "use client";
 
 import React from "react";
-import ClipLoader from "react-spinners/ClipLoader";
-
-const override = {
-  display: "flex",
-  justifyContent: "center",
-  alignItems: "center",
-  minHeight: "100vh",
-};
+import Image from "next/image";
+import Dziadzio from "@/assets/images/dziadzio_b_w_png.png";
 
 const LoadingPage = () => {
   return (
-    <div style={override}>
-      <ClipLoader color="#3b82f6" size={150} aria-label="Loading Spinner" />
+    <div className="loading-container">
+      <Image
+        src={Dziadzio}
+        alt="Loading..."
+        className="loading-image"
+        width={160}
+        height={240}
+      />
     </div>
   );
 };

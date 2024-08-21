@@ -3,7 +3,7 @@ import "@/assets/globals.css";
 import Link from "next/link";
 import { FaHome } from "react-icons/fa";
 import Image from "next/image";
-import logo from "@/assets/images/logo_arche_ok.png";
+import logo from "@/assets/images/logo_1_png.png";
 import PasswordCheck from "@/components/PasswordCheck";
 
 const MainLayout = ({ children }) => {
@@ -15,14 +15,11 @@ const MainLayout = ({ children }) => {
           <Image
             src={logo}
             alt=""
-            className="fixed top-0 left-0 h-30 w-30 z-50"
-            width={70}
+            className="fixed top-3 left-3 h-30 w-30 z-50"
+            width={110}
             height={100}
           />
-          <Link
-            className="fixed top-4 left-20 text-blue-700 hover:text-blue-900 z-50"
-            href="/"
-          >
+          <Link className="ui fixed top-7 left-40  z-50" href="/">
             <FaHome size={32} />
           </Link>
 

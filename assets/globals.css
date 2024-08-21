@@ -16,12 +16,57 @@
     top:25px;
     right:220px; 
   }
+  .loading-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background-color: white; /* Optional: Set background color */
+  }
+  
+  .loading-image {
+    width: 160px; /* Adjust size as needed */
+    height: 240px; /* Adjust size as needed */
+    animation: scale .7s infinite; /* Animation name, duration, and repetition */
+  }
+  
+  @keyframes scale {
+    0% {
+      transform: scale(1);
+    }
+    25% {
+      transform: scale(1.2); /* Adjust the scaling factor */
+    }
+    100% {
+      transform: scale(0);
+    }
+  }
+  .ui 
+  {
+    color: 	#C19A6B !important; 
+  }
+  .ui-Link
+  {
+    background-color: #C19A6B !important;
+    color: white;
+  }
+  div.ui 
+  {
+    background-color: #C19A6B;
+    color:white !important;
+  }
+  button.ui 
+  {
+    background-color: #C19A6B;
+    color:white !important;
+
+  }
   /* button for printing */
   .print-btn
   {
     position: fixed;
-    top: 11px;
-    left: 120px;
+    top: 22px;
+    left: 210px;
   }
 
   /* Phone view styling */

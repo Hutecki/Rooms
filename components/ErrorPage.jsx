@@ -10,7 +10,7 @@ const ErrorPage = ({
   linkHref = "/",
 }) => {
   return (
-    <section className="bg-blue-50 min-h-screen flex-grow">
+    <section className="bg-white min-h-screen flex-grow">
       <div className="container m-auto max-w-2xl py-24">
         <div className="bg-white px-6 py-24 mb-4 shadow-md rounded-md border m-4 md:m-0">
           <div className="text-center">
@@ -18,7 +18,7 @@ const ErrorPage = ({
             <p className="text-gray-500 text-xl mb-10">{message}</p>
 
             <Link
-              className="bg-blue-700 hover:bg-blue-800 text-white font-bold py-4 px-6 rounded"
+              className="ui-Link bg-blue-700 hover:bg-blue-800 text-white font-bold py-4 px-6 rounded"
               href={linkHref}
             >
               {linkText}
