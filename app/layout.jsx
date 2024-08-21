@@ -15,12 +15,12 @@ const MainLayout = ({ children }) => {
           <Image
             src={logo}
             alt=""
-            className="fixed top-0 left-0 h-30 w-30"
+            className="fixed top-0 left-0 h-30 w-30 z-50"
             width={70}
             height={100}
           />
           <Link
-            className="fixed top-4 left-20 text-blue-700 hover:text-blue-900"
+            className="fixed top-4 left-20 text-blue-700 hover:text-blue-900 z-50"
             href="/"
           >
             <FaHome size={32} />
