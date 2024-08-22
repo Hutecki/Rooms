@@ -83,7 +83,7 @@
   {
     .ui-Home-Container
     {
-      transform: translateX(130%);
+     left: 90%;
     }
     .room 
     {

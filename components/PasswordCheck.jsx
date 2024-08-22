@@ -10,7 +10,6 @@ const PasswordCheck = async ({ children }) => {
   const passwordData = await Password.findOne().lean();
   const correctPassword = passwordData?.Password;
 
-  console.log(passwordData);
   return (
     <PasswordProtected correctPassword={correctPassword}>
       {children}
