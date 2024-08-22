@@ -17,6 +17,7 @@ const RoomExtras = () => {
     <div className="absolute left-[13rem]">
       {/* Legend and PrintButton will only render on room pages */}
       <PrintButton />
+      <Legend />
     </div>
   );
 };

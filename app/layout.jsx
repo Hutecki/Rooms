@@ -14,7 +14,7 @@ const MainLayout = ({ children }) => {
         <PasswordCheck>
           {/* Navigation bar */}
 
-          <div className="fixed navbar top-0 left-0 w-full bg-white z-50 shadow-md border-b border-gray-300">
+          <div className="fixed navbar top-0 left-0  bg-white z-50 shadow-md border-b border-gray-300">
             <div className="relative h-20 flex items-center justify-start">
               {/* Logo */}
               <Image

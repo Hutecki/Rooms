@@ -15,9 +15,9 @@ const Legend = () => {
   };
 
   return (
-    <div className="fixed top-0 right-0 md:top-10 md:right-5 flex flex-col items-end">
+    <div className="fixed top-0 right-0 md:top-[3rem] md:right-1 flex flex-col items-end">
       <div
-        className={`legend-container fixed top-0 right-0 md:top-[6rem] text-neutral-500 thin-italic transition-transform transform ${
+        className={`legend-container fixed top-0 right-0 md:top-[3rem] text-neutral-500 thin-italic transition-transform transform ${
           isVisible ? "translate-x-0" : "translate-x-full"
         }`}
       >

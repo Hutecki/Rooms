@@ -10,7 +10,6 @@
     
   }
   /* Legend description  */
- 
   p.Alt
   {
     position: absolute;
@@ -24,7 +23,10 @@
     min-height: 100vh;
     background-color: white; /* Optional: Set background color */
   }
-  
+  .navbar
+  {
+    width: 100%;
+  }
   .loading-image {
     width: 160px; /* Adjust size as needed */
     height: 240px; /* Adjust size as needed */
@@ -107,12 +109,12 @@
           color: #3b3b3b;
     }
     .focused {
-      transform: translateY(-50px); 
+      transform: translateY(-50px) !important; 
       transition: transform 0.3s ease-in-out; 
     }
     .legend-container
     {
-      top:1.3rem;
+      top:30rem;
     }
   }
   .legend-container {
@@ -163,11 +165,16 @@
     { 
       display: none !important;
     }
+
     .credits {
       page-break-before: auto;
     }
+    .print-legend
+    {
+      z-index: 100;
+    }
     * {
-      margin: 0 !important;
+      margin:0 !important;
       padding: 0 !important;
     }
 
@@ -175,17 +182,14 @@
     {
       display: none;
     }
-    body {
-      margin: 0 !important;
-      padding: 0 !important;
-      
-    }
+ 
   
 
     table {
       width: 100% !important;
       border-collapse: collapse !important;
       height: 40%;
+      margin-top: 0;
     }
     
   
@@ -196,7 +200,9 @@
       text-align: left !important;
     
     }
+
     .print-legend {
+      transform: translateY(100%);
       text-align: center;
       display: block !important;
       font-size: 0.5rem !important;
@@ -204,13 +210,13 @@
   
     .print-legend p
     {
-      margin-top: 10px !important;
-      font-size: 1.2rem !important;
+      margin-top: 8px !important;
+      font-size: 1rem !important;
     }
     .print-legend h1
     {
       margin-bottom: 20px !important;
-      font-size: 1.4rem !important;
+      font-size: 1.2rem !important;
     }
 
     h1 {
@@ -220,11 +226,11 @@
     }
   
     p, td {
-      font-size: 1.6rem !important;
+      font-size: 1.3rem !important;
     }
   
    
     body {
-      font-size: 1.6rem !important; 
+      font-size: 1.3rem !important; 
     }
   }
