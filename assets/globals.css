@@ -112,10 +112,10 @@
       transform: translateY(-50px) !important; 
       transition: transform 0.3s ease-in-out; 
     }
-    .legend-container
-    {
-      top:30rem;
-    }
+   .legend-container
+   {
+    top: 6rem;
+   }
   }
   .legend-container {
     width: max-content;
