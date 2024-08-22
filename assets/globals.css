@@ -64,13 +64,7 @@
     color:white !important;
 
   }
-  /* button for printing */
-  /* .print-btn
-  {
-    position: absolute;
-    justify-content: center;
- align-items: center;
-  } */
+ 
 .ui:hover, .ui-Link:hover
 {
   background-color: rgba(193,154,107,0.9) !important;
@@ -89,7 +83,7 @@
   {
     .ui-Home-Container
     {
-      transform: translateX(150%);
+      transform: translateX(130%);
     }
     .room 
     {
