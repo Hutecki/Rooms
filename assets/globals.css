@@ -87,6 +87,10 @@
 
   @media(max-width:763px)
   {
+    .ui-Home-Container
+    {
+      transform: translateX(150%);
+    }
     .room 
     {
       margin-top: 75rem;

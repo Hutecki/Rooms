@@ -25,7 +25,10 @@ const MainLayout = ({ children }) => {
                 height={100}
               />
               {/* Home Icon Link */}
-              <Link className="absolute left-[10rem]" href="/">
+              <Link
+                className="ui-Home-Container absolute left-[10rem]"
+                href="/"
+              >
                 <FaHome size={32} className="ui-Home" />
               </Link>
               {/* Room-specific components */}
