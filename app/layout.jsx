@@ -5,25 +5,38 @@ import { FaHome } from "react-icons/fa";
 import Image from "next/image";
 import logo from "@/assets/images/logo_1_png.png";
 import PasswordCheck from "@/components/PasswordCheck";
+import RoomExtras from "@/components/RoomExtras";
 
 const MainLayout = ({ children }) => {
   return (
     <html>
       <body>
         <PasswordCheck>
-          {/* Home Icon Link */}
-          <Image
-            src={logo}
-            alt=""
-            className="fixed top-3 left-3 h-30 w-30 z-50"
-            width={110}
-            height={100}
-          />
-          <Link className="ui fixed top-7 left-40  z-50" href="/">
-            <FaHome size={32} />
-          </Link>
+          {/* Navigation bar */}
 
-          <div>{children}</div>
+          <div className="fixed navbar top-0 left-0 w-full bg-white z-50 shadow-md border-b border-gray-300">
+            <div className="relative h-20 flex items-center justify-start">
+              {/* Logo */}
+              <Image
+                src={logo}
+                alt="Logo"
+                className="absolute left-[1rem] h-16 w-auto"
+                width={110}
+                height={100}
+              />
+              {/* Home Icon Link */}
+              <Link className="absolute left-[10rem]" href="/">
+                <FaHome size={32} className="ui-Home" />
+              </Link>
+              {/* Room-specific components */}
+              <RoomExtras />
+            </div>
+          </div>
+
+          {/* Main content */}
+          <div className="pt-24">{children}</div>
+
+          {/* Footer credits */}
           <div className="credits font-Roboto fixed right-1 bottom-0 text-sm md:text-base font-extralight italic">
             design: Hubert & Jerzy
           </div>

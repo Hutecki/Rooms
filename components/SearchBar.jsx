@@ -19,7 +19,7 @@ const SearchBar = () => {
 
   return (
     <div
-      className={`flex flex-col items-center mb-4 transition-transform ${
+      className={`flex flex-col justify-center items-center mb-4 transition-transform ${
         isFocused ? "focused" : ""
       }`}
     >
@@ -36,7 +36,7 @@ const SearchBar = () => {
       <Link href={`/room/${searchTerm}`}>
         <button
           id="navigate-button"
-          className="ui p-2 bg-blue-500 text-white rounded w-full max-w-xs"
+          className="ui p-2  text-white rounded w-full max-w-xs"
         >
           Przejdź do pokoju
         </button>

@@ -9,7 +9,7 @@ const RoomPage = async () => {
   const rooms = await Room.find({}).sort({ Pokoj: 1 }).lean();
 
   return (
-    <div className="flex flex-col items-center justify-center min-h-screen py-2 mt-20 ">
+    <div className="room flex flex-col items-center justify-center min-h-screen py-2 mt-[30rem] ">
       <h1 className="text-4xl mb-10">Pokoje</h1>
       <div className="w-full max-w-6xl mx-auto">
         {rooms.length === 0 ? (

@@ -64,7 +64,7 @@ const RoomPage = async ({ params }) => {
         <p>SCH - Schody</p>
       </div>
       <Legend />
-      <PrintButton />
+      {/* <PrintButton /> */}
       <h1 className="text-4xl md:text-5xl mb-6">Pokój {room.Pokoj}</h1>
       <table className="table-auto border-collapse border border-gray-300 w-full max-w-md md:max-w-lg lg:max-w-xl">
         <tbody>

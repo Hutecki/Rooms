@@ -8,7 +8,7 @@ const HomeRoom = ({ room }) => {
         className={`relative mt-1 room-${room.Pokoj} p-4 border border-gray-300 rounded cursor-pointer`}
       >
         {/* Sektor Indicator */}
-        <div className="ui absolute top-1 right-1 bg-blue-500 text-white text-xs px-2 py-1 rounded">
+        <div className="ui absolute top-1 right-1  text-white text-xs px-2 py-1 rounded">
           Sektor {room.Sektor}
         </div>
 

@@ -12,7 +12,7 @@ const PrintButton = () => {
     <FaPrint
       size={43}
       onClick={handlePrint}
-      className="ui print-btn print:hidden text-blue-700 cursor-pointer hover:text-blue-900 p-2 rounded mb-4"
+      className="ui-Print print-btn print:hidden  cursor-pointer  p-2 rounded "
     />
   );
 };

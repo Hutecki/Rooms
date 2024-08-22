@@ -10,6 +10,7 @@
     
   }
   /* Legend description  */
+ 
   p.Alt
   {
     position: absolute;
@@ -41,7 +42,7 @@
       transform: scale(0);
     }
   }
-  .ui 
+  .ui, .ui-Home, .ui-Print 
   {
     color: 	#C19A6B !important; 
   }
@@ -62,17 +63,32 @@
 
   }
   /* button for printing */
-  .print-btn
+  /* .print-btn
   {
-    position: fixed;
-    top: 22px;
-    left: 210px;
-  }
-
+    position: absolute;
+    justify-content: center;
+ align-items: center;
+  } */
+.ui:hover, .ui-Link:hover
+{
+  background-color: rgba(193,154,107,0.9) !important;
+}
+.ui-Home:hover
+{
+  color:rgba(193,154,107,0.9) !important;
+}
+.ui-Print:hover 
+{
+  color:rgba(193,154,107,0.9) !important;
+}
   /* Phone view styling */
 
   @media(max-width:763px)
   {
+    .room 
+    {
+      margin-top: 75rem;
+    }
     .print-btn
     {
       display: none;
@@ -134,7 +150,10 @@
     top:-25%;
   }
 
-
+  .flex-col
+  {
+    transform: translateY(-10%);
+  }
   /* print view styling  */
   @media print {
     .print:hidden,
@@ -144,7 +163,13 @@
     { 
       display: none !important;
     }
-  
+    .credits {
+      page-break-before: auto;
+    }
+    * {
+      margin: 0 !important;
+      padding: 0 !important;
+    }
 
     .fixed 
     {
