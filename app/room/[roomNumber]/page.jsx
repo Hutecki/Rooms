@@ -4,6 +4,7 @@ import Room from "@/models/Room";
 import ErrorPage from "@/components/ErrorPage";
 import Legend from "@/components/Legend";
 import PrintButton from "@/components/PrintButton";
+import { redirect } from "next/navigation";
 const RoomPage = async ({ params }) => {
   const { roomNumber } = params;
 
@@ -27,14 +28,7 @@ const RoomPage = async ({ params }) => {
 
   // Validate the room if is number first
   if (isNaN(roomNumber)) {
-    return (
-      <ErrorPage
-        title="Pokój nie istnieje"
-        message="Pamiętaj o tym, że pokój musi się składać z cyfr"
-        linkText="Powrót"
-        linkHref="/"
-      />
-    );
+    return redirect("/err");
   }
 
   await connectDB();
@@ -42,14 +36,7 @@ const RoomPage = async ({ params }) => {
   const room = await Room.findOne({ Pokoj: roomNumber }).lean();
   //  check if room at given number exists
   if (!room) {
-    return (
-      <ErrorPage
-        title="Pokój nie istnieje"
-        message="Nie znaleziono pokoju o podanym numerze."
-        linkText="Powrót"
-        linkHref="/"
-      />
-    );
+    return redirect("/err");
   }
 
   const isStairsOnly = stairsRooms.includes(roomNumber.toString());
