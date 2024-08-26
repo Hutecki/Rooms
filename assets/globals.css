@@ -225,12 +225,12 @@
     .print-legend p
     {
       margin-top: 8px !important;
-      font-size: 1rem !important;
+      font-size: 1.2rem !important;
     }
     .print-legend h1
     {
       margin-bottom: 20px !important;
-      font-size: 1.2rem !important;
+      font-size: 1.5rem !important;
     }
 
     h1 {

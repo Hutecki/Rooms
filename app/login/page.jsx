@@ -2,8 +2,6 @@
 
 import { useState } from "react";
 import { authenticate } from "@/services/authenticate"; // Import the server action
-import Link from "next/link";
-import { redirect } from "next/navigation";
 export default function Login() {
   const [password, setPassword] = useState("");
   const [error, setError] = useState(null);

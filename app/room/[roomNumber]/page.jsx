@@ -1,9 +1,6 @@
 import React from "react";
 import connectDB from "@/config/database";
 import Room from "@/models/Room";
-import ErrorPage from "@/components/ErrorPage";
-import Legend from "@/components/Legend";
-import PrintButton from "@/components/PrintButton";
 import { redirect } from "next/navigation";
 import { checkAuthentication } from "@/services/authenticate";
 const RoomPage = async ({ params }) => {

@@ -1,6 +1,5 @@
 import React from "react";
 import SearchBar from "@/components/SearchBar";
-import PasswordCheck from "@/components/PasswordCheck";
 import { redirect } from "next/navigation";
 import { checkAuthentication } from "@/services/authenticate";
 const HomePage = async () => {

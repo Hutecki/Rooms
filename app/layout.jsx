@@ -5,7 +5,6 @@ import Link from "next/link";
 import { FaHome } from "react-icons/fa";
 import Image from "next/image";
 import logo from "@/assets/images/logo_1_png.png";
-import PasswordCheck from "@/components/PasswordCheck";
 
 const MainLayout = ({ children }) => {
   return (
