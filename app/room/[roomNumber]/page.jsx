@@ -34,6 +34,7 @@ const RoomPage = async ({ params }) => {
   await connectDB();
 
   const room = await Room.findOne({ Pokoj: roomNumber }).lean();
+
   //  check if room at given number exists
   if (!room) {
     return redirect("/err");
