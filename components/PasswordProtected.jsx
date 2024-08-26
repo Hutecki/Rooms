@@ -48,10 +48,7 @@ const PasswordProtected = ({ children }) => {
           className="p-2 border rounded mb-4 w-full"
           placeholder="Enter password"
         />
-        <button
-          type="submit"
-          className="bg-blue-500 text-white py-2 px-4 rounded hover:bg-blue-700"
-        >
+        <button type="submit" className="ui text-white py-2 px-4 rounded">
           Submit
         </button>
       </form>
