@@ -19,6 +19,7 @@ export async function authenticate(password) {
       secure: process.env.NODE_ENV === "production",
       maxAge: 36000, // 10 hour expiry
       path: "/",
+      sameSite: "Strict",
     });
     return { success: true };
   } else {

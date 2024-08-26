@@ -10,7 +10,7 @@ import RoomExtras from "@/components/RoomExtras";
 
 const RoomLayout = ({ children }) => {
   return (
-    <PasswordCheck>
+    <>
       {/* Navigation bar */}
       <div className="fixed navbar top-0 left-0 bg-white z-50 shadow-md border-b border-gray-300">
         <div className="relative h-20 flex items-center justify-start">
@@ -38,7 +38,7 @@ const RoomLayout = ({ children }) => {
       <div className="credits font-Roboto fixed right-1 bottom-0 text-sm md:text-base font-extralight italic">
         design: Hubert & Jerzy
       </div>
-    </PasswordCheck>
+    </>
   );
 };
 
