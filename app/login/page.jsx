@@ -1,5 +1,4 @@
 "use client";
-
 import { useState } from "react";
 import { authenticate } from "@/services/authenticate"; // Import the server action
 export default function Login() {
