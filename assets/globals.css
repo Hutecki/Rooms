@@ -21,6 +21,7 @@
     justify-content: center;
     align-items: center;
     min-height: 100vh;
+    background-color: transparent;
   /* Optional: Set background color */
   }
   .navbar
@@ -37,11 +38,23 @@
     0% {
       transform: scale(1);
     }
-    25% {
+    20% {
       transform: scale(1.2); /* Adjust the scaling factor */
     }
-    100% {
+     40%
+     {
+      transform: scale(0.6);
+     }
+     60%
+     {
       transform: scale(0);
+     }
+     80%
+     {
+      transform: scale(0.5);
+     }
+    100% {
+      transform: scale(1);
     }
   }
   .ui, .ui-Home, .ui-Print 

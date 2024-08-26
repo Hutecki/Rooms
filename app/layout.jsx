@@ -1,3 +1,4 @@
+// app/layout.jsx (Global Layout)
 import React from "react";
 import "@/assets/globals.css";
 import Link from "next/link";
@@ -5,7 +6,6 @@ import { FaHome } from "react-icons/fa";
 import Image from "next/image";
 import logo from "@/assets/images/logo_1_png.png";
 import PasswordCheck from "@/components/PasswordCheck";
-import RoomExtras from "@/components/RoomExtras";
 
 const MainLayout = ({ children }) => {
   return (
@@ -13,8 +13,7 @@ const MainLayout = ({ children }) => {
       <body>
         <PasswordCheck>
           {/* Navigation bar */}
-
-          <div className="fixed navbar top-0 left-0  bg-white z-50 shadow-md border-b border-gray-300">
+          <div className="fixed navbar top-0 left-0 bg-white z-50 shadow-md border-b border-gray-300">
             <div className="relative h-20 flex items-center justify-start">
               {/* Logo */}
               <Image
@@ -31,8 +30,6 @@ const MainLayout = ({ children }) => {
               >
                 <FaHome size={32} className="ui-Home" />
               </Link>
-              {/* Room-specific components */}
-              <RoomExtras />
             </div>
           </div>
 

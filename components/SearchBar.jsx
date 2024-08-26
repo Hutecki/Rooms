@@ -19,7 +19,7 @@ const SearchBar = () => {
 
   return (
     <div
-      className={`flex flex-col justify-center items-center mb-4 transition-transform ${
+      className={`flex flex-col items-center mb-4 transition-transform ${
         isFocused ? "focused" : ""
       }`}
     >
