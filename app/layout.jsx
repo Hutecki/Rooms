@@ -11,36 +11,31 @@ const MainLayout = ({ children }) => {
   return (
     <html>
       <body>
-        <PasswordCheck>
-          {/* Navigation bar */}
-          <div className="fixed navbar top-0 left-0 bg-white z-50 shadow-md border-b border-gray-300">
-            <div className="relative h-20 flex items-center justify-start">
-              {/* Logo */}
-              <Image
-                src={logo}
-                alt="Logo"
-                className="absolute left-[1rem] h-16 w-auto"
-                width={110}
-                height={100}
-              />
-              {/* Home Icon Link */}
-              <Link
-                className="ui-Home-Container absolute left-[10rem]"
-                href="/"
-              >
-                <FaHome size={32} className="ui-Home" />
-              </Link>
-            </div>
+        {/* Navigation bar */}
+        <div className="fixed navbar top-0 left-0 bg-white z-50 shadow-md border-b border-gray-300">
+          <div className="relative h-20 flex items-center justify-start">
+            {/* Logo */}
+            <Image
+              src={logo}
+              alt="Logo"
+              className="absolute left-[1rem] h-16 w-auto"
+              width={110}
+              height={100}
+            />
+            {/* Home Icon Link */}
+            <Link className="ui-Home-Container absolute left-[10rem]" href="/">
+              <FaHome size={32} className="ui-Home" />
+            </Link>
           </div>
+        </div>
 
-          {/* Main content */}
-          <div className="pt-24">{children}</div>
+        {/* Main content */}
+        <div className="pt-24">{children}</div>
 
-          {/* Footer credits */}
-          <div className="credits font-Roboto fixed right-1 bottom-0 text-sm md:text-base font-extralight italic">
-            design: Hubert & Jerzy
-          </div>
-        </PasswordCheck>
+        {/* Footer credits */}
+        <div className="credits font-Roboto fixed right-1 bottom-0 text-sm md:text-base font-extralight italic">
+          design: Hubert & Jerzy
+        </div>
       </body>
     </html>
   );
