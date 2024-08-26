@@ -1,32 +1,32 @@
 "use client";
 
 import React, { useState, useEffect } from "react";
+import { authenticate, checkAuthentication } from "@/services/authenticate";
 
-const PasswordProtected = ({ correctPassword, children }) => {
+const PasswordProtected = ({ children }) => {
   const [isAuthenticated, setIsAuthenticated] = useState(false);
   const [inputPassword, setInputPassword] = useState("");
 
-  // Check localStorage for the password when the component mounts
   useEffect(() => {
-    const storedPassword = localStorage.getItem("room_password");
-    if (storedPassword === correctPassword) {
-      setIsAuthenticated(true);
-    }
-  }, [correctPassword]);
+    const checkAuth = async () => {
+      const authenticated = await checkAuthentication();
+      setIsAuthenticated(authenticated);
+    };
 
-  // Handle password input change
+    checkAuth();
+  }, []);
+
   const handlePasswordChange = (e) => {
     setInputPassword(e.target.value);
   };
 
-  // Handle form submission
-  const handleSubmit = (e) => {
+  const handleSubmit = async (e) => {
     e.preventDefault();
-    if (inputPassword === correctPassword) {
-      localStorage.setItem("room_password", inputPassword);
+    const result = await authenticate(inputPassword);
+    if (result.success) {
       setIsAuthenticated(true);
     } else {
-      alert("Incorrect password. Please try again.");
+      alert(result.message);
     }
   };
 
@@ -50,7 +50,7 @@ const PasswordProtected = ({ correctPassword, children }) => {
         />
         <button
           type="submit"
-          className="ui bg-blue-500 text-white py-2 px-4 rounded hover:bg-blue-700"
+          className="bg-blue-500 text-white py-2 px-4 rounded hover:bg-blue-700"
         >
           Submit
         </button>
