@@ -252,5 +252,6 @@
     }
     @page{
       size: A4;
+      margin:0mm;
   }
   }
